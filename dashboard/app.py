@@ -349,9 +349,9 @@ if page == "🏠  Overview":
         col.markdown(f"""
         <div style="background:{bg};padding:18px;border-radius:14px;text-align:center;height:170px;">
             <div style="font-size:2rem">{icon}</div>
-            <div style="font-size:0.7rem;color:#888;margin-top:2px;font-weight:600">{nb}</div>
-            <div style="font-weight:700;font-size:1rem;margin-top:4px;white-space:pre-line">{title}</div>
-            <div style="font-size:0.75rem;color:#555;margin-top:6px">{subtitle}</div>
+            <div style="font-size:0.7rem;color:#666;margin-top:2px;font-weight:600">{nb}</div>
+            <div style="font-weight:700;font-size:1rem;margin-top:4px;white-space:pre-line;color:#1e293b">{title}</div>
+            <div style="font-size:0.75rem;color:#475569;margin-top:6px">{subtitle}</div>
         </div>""", unsafe_allow_html=True)
 
     st.markdown("")
@@ -366,9 +366,9 @@ if page == "🏠  Overview":
         col.markdown(f"""
         <div style="background:{bg};padding:18px;border-radius:14px;text-align:center;height:170px;">
             <div style="font-size:2rem">{icon}</div>
-            <div style="font-size:0.7rem;color:#888;margin-top:2px;font-weight:600">{nb}</div>
-            <div style="font-weight:700;font-size:1rem;margin-top:4px;white-space:pre-line">{title}</div>
-            <div style="font-size:0.75rem;color:#555;margin-top:6px">{subtitle}</div>
+            <div style="font-size:0.7rem;color:#666;margin-top:2px;font-weight:600">{nb}</div>
+            <div style="font-weight:700;font-size:1rem;margin-top:4px;white-space:pre-line;color:#1e293b">{title}</div>
+            <div style="font-size:0.75rem;color:#475569;margin-top:6px">{subtitle}</div>
         </div>""", unsafe_allow_html=True)
 
     st.markdown("---")
