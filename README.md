@@ -8,6 +8,10 @@
 
 > **7 end-to-end ML projects across the full drug discovery pipeline** — from molecular property prediction and generative chemistry to structure-based design and drug repurposing. Each notebook is production-grade: scaffold-aware splits, SHAP explainability, Optuna tuning, MLflow tracking, and a unified FastAPI serving layer.
 
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Demo-brightgreen?logo=streamlit)](https://drug-discovery-pipeline.streamlit.app/)
+
+> **Live Streamlit Dashboard:** [drug-discovery-pipeline.streamlit.app](https://drug-discovery-pipeline.streamlit.app/)
+
 ---
 
 ## 🏆 Results at a Glance
