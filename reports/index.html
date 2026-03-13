@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drug Discovery ML Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      min-height: 100vh; display: flex; flex-direction: column;
+      align-items: center; padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.4rem; font-weight: 800; color: #fff;
+      text-align: center; margin-bottom: 8px;
+      background: linear-gradient(135deg, #a78bfa, #60a5fa);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: #94a3b8; text-align: center; margin-bottom: 40px; font-size: 1.05rem; }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px; max-width: 1100px; width: 100%;
+    }
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px; padding: 28px 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none; color: inherit; display: block;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      border-color: rgba(167,139,250,0.5);
+    }
+    .icon { font-size: 2.4rem; margin-bottom: 10px; }
+    .nb-label { font-size: 0.7rem; color: #94a3b8; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+    .title { font-size: 1.2rem; font-weight: 700; color: #f1f5f9; margin: 6px 0 10px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .tag {
+      font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; font-weight: 600;
+      background: rgba(167,139,250,0.15); color: #a78bfa;
+    }
+    .desc { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
+    .footer { margin-top: 48px; color: #64748b; font-size: 0.82rem; text-align: center; }
+    .footer a { color: #a78bfa; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>💊 Drug Discovery ML Portfolio</h1>
+  <p class="subtitle">7 end-to-end machine learning projects across the full drug discovery pipeline</p>
+
+  <div class="grid">
+    <a class="card" href="Toxicity_Prediction.html">
+      <div class="icon">🧪</div>
+      <div class="nb-label">NB01</div>
+      <div class="title">Toxicity Prediction</div>
+      <p class="desc">Multi-label classification across 12 Tox21 assay targets using Morgan fingerprints, XGBoost, and GCN. Scaffold-aware split + Optuna tuning.</p>
+      <div class="tags">
+        <span class="tag">Tox21 · 7831 mols</span>
+        <span class="tag">XGBoost · GCN</span>
+        <span class="tag">AUC 0.849</span>
+      </div>
+    </a>
+
+    <a class="card" href="ADMET_Properties_Prediction.html">
+      <div class="icon">💧</div>
+      <div class="nb-label">NB02</div>
+      <div class="title">ADMET Properties</div>
+      <p class="desc">Regression for aqueous solubility (logS) and lipophilicity. Multi-task DNN, MC-Dropout uncertainty, LOF applicability domain.</p>
+      <div class="tags">
+        <span class="tag">ESOL · 1128 mols</span>
+        <span class="tag">Ridge · RF · XGB · DNN</span>
+        <span class="tag">R² 0.966</span>
+      </div>
+    </a>
+
+    <a class="card" href="Activity_Classification.html">
+      <div class="icon">🎯</div>
+      <div class="nb-label">NB03</div>
+      <div class="title">Activity Classification</div>
+      <p class="desc">Binary classification of EGFR inhibitors from 19149 ChEMBL compounds. pIC50 regression + SHAP explanation + ChemBERTa fine-tuning.</p>
+      <div class="tags">
+        <span class="tag">ChEMBL EGFR · 19149</span>
+        <span class="tag">XGBoost · DNN · BERT</span>
+        <span class="tag">AUC 0.969</span>
+      </div>
+    </a>
+
+    <a class="card" href="Molecule_Generation_VAE.html">
+      <div class="icon">🔬</div>
+      <div class="nb-label">NB04</div>
+      <div class="title">Molecule Generation (VAE)</div>
+      <p class="desc">SMILES-based VAE and LSTM generative models. SELFIES encoding, UMAP latent space, CVAE with property conditioning, REINFORCE RL (QED reward).</p>
+      <div class="tags">
+        <span class="tag">LSTM · VAE · SELFIES</span>
+        <span class="tag">REINFORCE RL</span>
+        <span class="tag">Validity 98.2%</span>
+      </div>
+    </a>
+
+    <a class="card" href="Molecular_Clustering.html">
+      <div class="icon">🗂️</div>
+      <div class="nb-label">NB05</div>
+      <div class="title">Molecular Clustering</div>
+      <p class="desc">KMeans + DBSCAN + HDBSCAN in UMAP fingerprint space. Drug candidate scoring, scaffold analysis, Tanimoto similarity graph.</p>
+      <div class="tags">
+        <span class="tag">KMeans · DBSCAN</span>
+        <span class="tag">UMAP 3D · NetworkX</span>
+        <span class="tag">DrugScore 0.849</span>
+      </div>
+    </a>
+
+    <a class="card" href="Structure_Based_Design.html">
+      <div class="icon">⚗️</div>
+      <div class="nb-label">NB06</div>
+      <div class="title">Structure-Based Design</div>
+      <p class="desc">Molecular docking of EGFR inhibitors (WT + T790M mutant) using AutoDock-Vina. ProLIF interaction fingerprints, docking ↔ IC50 correlation, py3Dmol complex viewer.</p>
+      <div class="tags">
+        <span class="tag">EGFR PDB 1IEP · 3W2O</span>
+        <span class="tag">AutoDock-Vina · ProLIF</span>
+        <span class="tag">ΔG correlation r=0.91</span>
+      </div>
+    </a>
+
+    <a class="card" href="Drug_Repurposing.html">
+      <div class="icon">🔄</div>
+      <div class="nb-label">NB07</div>
+      <div class="title">Drug Repurposing</div>
+      <p class="desc">FDA-approved drug repurposing via ChEMBL similarity search + XGBoost activity prediction. Drug-Target Interaction network, Tanimoto similarity matrix, integrated repurposing score.</p>
+      <div class="tags">
+        <span class="tag">ChEMBL max_phase=4</span>
+        <span class="tag">DTI Network · pyvis</span>
+        <span class="tag">Repurposing Score 0.78</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="footer">
+    Built with RDKit · scikit-learn · XGBoost · PyTorch · MLflow · Streamlit
+    &nbsp;·&nbsp; <a href="../dashboard/app.py">Streamlit Dashboard</a>
+    &nbsp;·&nbsp; 7 end-to-end projects · EGFR → Toxicity → ADMET → Generation → Docking → Repurposing
+  </div>
+</body>
+</html>

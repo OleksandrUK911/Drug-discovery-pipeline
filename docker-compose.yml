@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: drug-discovery-dashboard:latest
+    container_name: drug-discovery-dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    volumes:
+      # Mount local models/ directory so predictions use trained weights
+      - ./01_Toxicity_Prediction/models:/app/01_Toxicity_Prediction/models:ro
+
+# Optional: uncomment to add FastAPI (NB01 REST server)
+#  api:
+#    build:
+#      context: ./01_Toxicity_Prediction
+#      dockerfile: ../Dockerfile.api
+#    ports:
+#      - "8000:8000"
+#    depends_on:
+#      - dashboard

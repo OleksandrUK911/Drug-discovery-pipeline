@@ -1,0 +1,104 @@
+# Drug Discovery ML Portfolio — Python Dependencies
+# Install with: pip install -r requirements.txt
+# Note: RDKit is best installed via conda: conda install -c conda-forge rdkit
+
+# ── Core Scientific Stack ──────────────────────────────────────
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+matplotlib>=3.6
+seaborn>=0.12
+
+# ── Machine Learning ───────────────────────────────────────────
+scikit-learn>=1.2
+xgboost>=1.7
+shap>=0.42
+imbalanced-learn>=0.10
+
+# ── Deep Learning (PyTorch) ────────────────────────────────────
+# Install CPU version:
+torch>=2.0
+# For GPU: visit https://pytorch.org/get-started/locally/
+
+# ── Graph Neural Networks ──────────────────────────────────────
+# torch-geometric requires separate install — see:
+# https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html
+# torch-geometric
+# torch-scatter
+# torch-sparse
+
+# ── Chemistry Libraries ────────────────────────────────────────
+# rdkit — install via conda: conda install -c conda-forge rdkit
+# rdkit-pypi                  # pip alternative (may have issues)
+deepchem>=2.7
+chembl-webresource-client>=0.10
+
+# ── Dimensionality Reduction / Visualization ───────────────────
+umap-learn>=0.5
+mols2grid>=0.8
+
+# ── Hyperparameter Tuning ──────────────────────────────────────
+optuna>=3.0
+
+# ── Molecular Representations ─────────────────────────────────
+selfies>=2.1               # SELFIES tokenization (NB04)
+
+# ── Advanced Clustering ────────────────────────────────────────
+hdbscan>=0.8               # Hierarchical DBSCAN (NB05)
+
+# ── Graph / Network Analysis ──────────────────────────────────
+networkx>=3.0              # Molecular similarity graphs (NB05)
+
+# ── Interactive Visualization ─────────────────────────────────
+plotly>=5.14               # Interactive HTML scatter plots (NB05)
+
+# ── NLP / Transformer Models ──────────────────────────────────
+transformers>=4.35         # ChemBERTa fine-tuning (NB03)
+datasets>=2.14             # HuggingFace datasets helper
+accelerate>=0.24           # Distributed/mixed-precision training
+
+# ── REST API Serving ──────────────────────────────────────────
+fastapi>=0.100             # API server for model serving (NB01)
+uvicorn[standard]>=0.23    # ASGI server for FastAPI
+
+# ── Experiment Tracking ───────────────────────────────────────
+mlflow>=2.9                # Experiment logging (NB01, NB02, NB03)
+# wandb>=0.16              # Weights & Biases — cloud experiment tracking (optional)
+
+# ── Interactive Visualization ─────────────────────────────────
+plotly>=5.18               # Interactive charts (Plotly Express + Graph Objects)
+kaleido>=0.2               # Plotly → static PNG/SVG export
+bokeh>=3.2                 # Alternative interactive charts (NB05)
+pyvis>=0.3                 # Interactive network/graph viewer (NB05)
+itables>=1.6               # Interactive DataFrames (DT.js) in Jupyter
+
+# ── Molecular Visualization ───────────────────────────────────
+py3Dmol>=2.0               # 3D molecular viewer inline in Jupyter
+cairosvg>=2.7              # SVG → PNG for RDKit molecule exports
+
+# ── Dashboard / Web App ───────────────────────────────────────
+streamlit>=1.30            # Complete web dashboard for full portfolio
+
+# ── Structure-Based Drug Design (NB06) ────────────────────────
+# vina>=1.2                # AutoDock-Vina Python API (conda recommended)
+# meeko>=0.5               # Ligand preparation for AutoDock-Vina (PDBQT)
+# prolif>=2.0              # Protein-Ligand Interaction Fingerprints
+biopython>=1.81            # PDB parsing + bioinformatics utilities
+# pdbfixer + openmm: conda install -c conda-forge pdbfixer openmm
+
+# ── Drug Repurposing (NB07) ────────────────────────────────────
+# chembl-webresource-client already listed above
+
+# ── Code Quality ───────────────────────────────────────────────
+pre-commit>=3.5            # Git pre-commit hooks (black, flake8, isort)
+
+# ── Testing ────────────────────────────────────────────────────
+pytest>=7.4                # Unit test runner
+pytest-cov>=4.1            # Coverage reports
+httpx>=0.26                # FastAPI TestClient dependency
+
+# ── Jupyter ────────────────────────────────────────────────────
+jupyter>=1.0
+jupyterlab>=3.5
+ipywidgets>=8.0
+tqdm>=4.65

@@ -1,0 +1,80 @@
+# ── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# ── Virtual environments ────────────────────────────────────────────────────
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# ── Jupyter ─────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Testing & Coverage ──────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+nosetests.xml
+pytest.xml
+
+# ── Large Model Files (Random Forest — 10–35 MB each, ~264 MB total) ────────
+# Re-generate by running: jupyter nbconvert --to notebook --execute 01_Toxicity_Prediction/Toxicity_Prediction.ipynb
+01_Toxicity_Prediction/models/rf_*.pkl
+
+# ── MLflow Tracking Data ────────────────────────────────────────────────────
+# MLflow artifacts and SQLite databases (re-created on notebook execution)
+mlruns/
+**/mlruns/
+mlflow.db
+**/mlflow.db
+
+# ── Scratch / Untitled Notebooks ────────────────────────────────────────────
+Untitled*.ipynb
+untitled*.ipynb
+
+# ── OS / Editor ─────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── Secrets & Credentials ───────────────────────────────────────────────────
+.env
+.env.*
+secrets.yaml
+secrets.yml
+*.pem
+*.key
+
+# ── Byte-compiled / Cached ──────────────────────────────────────────────────
+*.pyc
+*.pyo

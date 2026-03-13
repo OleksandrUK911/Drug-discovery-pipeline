@@ -1,0 +1,15 @@
+# ── Dashboard-only slim requirements (used in Docker image) ──────────────────
+# RDKit is installed via conda (see Dockerfile) — do NOT include here
+# Run: pip install -r requirements_dashboard.txt
+
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+streamlit>=1.30
+plotly>=5.18
+py3Dmol>=2.0
+pyvis>=0.3
+networkx>=3.0
+scikit-learn>=1.2
+xgboost>=1.7
+imageio>=2.30

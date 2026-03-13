@@ -1,0 +1,6 @@
+Name,SMILES,IC50_nM,pIC50,Docking_Score_WT,Docking_Score_T790M,Generation,Source
+Afatinib,CN(C)/C=C/C(=O)Nc1cc2c(Nc3ccc(F)c(Cl)c3)ncnc2cc1OCC[F],0.5,9.301,-10.8,-9.2,2,Precomputed (literature)
+Osimertinib,C=CC(=O)Nc1cc(-n2cc(C)c(NC3=NC=CC(=N3)N(C)CCN(C)C)n2)c(OC)cc1NC(=O)/C=C/CN(C)C,0.84,9.076,-10.4,-11.2,3,Precomputed (literature)
+Erlotinib,C#Cc1cccc(NC2=NC=NC3=CC(OCCO)=C(OCC)C=C23)c1,1.0,9.0,-10.1,-7.8,1,Precomputed (literature)
+Gefitinib,COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCCN1CCOCC1,5.6,8.252,-9.8,-7.4,1,Precomputed (literature)
+Lapatinib,CS(=O)(=O)CCNCc1ccc(-c2ccc3ncnc(Nc4ccc(OCc5cccc(F)c5)c(Cl)c4)c3c2)o1,11.0,7.959,-9.3,-8.1,2,Precomputed (literature)
